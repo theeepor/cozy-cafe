@@ -87,6 +87,33 @@
     .menu-item {
       cursor: pointer;
     }
+
+    /* Subcategory Buttons */
+    #beverageSub, #foodSub {
+      display: none;
+      gap: 10px;
+      margin: 10px 0;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    #beverageSub button, #foodSub button {
+      background-color: #a46319;
+      border: none;
+      color: #fff;
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    #beverageSub button.active,
+    #beverageSub button:hover,
+    #foodSub button.active,
+    #foodSub button:hover {
+      background-color: #d69c4e;
+    }
   </style>
 </head>
 <body>
@@ -112,6 +139,19 @@
       </div>
 
       <input type="text" id="searchInput" placeholder="Search by name..." />
+    </div>
+
+    <!-- Beverage Subcategories -->
+    <div id="beverageSub">
+      <button class="sub-btn" data-category="beverage" data-sub="hot">Hot</button>
+      <button class="sub-btn" data-category="beverage" data-sub="cold">Cold</button>
+    </div>
+
+    <!-- Food Subcategories -->
+    <div id="foodSub">
+      <button class="sub-btn" data-category="food" data-sub="pasta">Pasta</button>
+      <button class="sub-btn" data-category="food" data-sub="sandwiches">Sandwiches</button>
+      <button class="sub-btn" data-category="food" data-sub="soup">Soup</button>
     </div>
 
     <div class="menu-items" id="menuContainer">
